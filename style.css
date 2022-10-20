@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: justify;
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: 2em;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+img.svg {
+    width: 500px;
+    height: auto;
+    background-color: white;
+}

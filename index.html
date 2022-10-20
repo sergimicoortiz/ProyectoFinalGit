@@ -1,50 +1,173 @@
-<!doctype html>
-<html class="no-js" lang="es">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ProyectoFinalGit</title>
 </head>
 
 <body>
+    <h1>Actividad Final Git</h1>
 
-    <header>
-        <div>2DAW</div>
-        <nav>
-            <span>Home</span>
-        </nav>
-    </header>
-    <div>
-        <!-- Comentario random -->
-        <p>Contenido HTML</p>
-        <p>Atributo HTML</p>
-    </div>
-    <footer>
-        <span>Footer de la pagina</span>
-    </footer>
+    <nav>
+        <h2>Tabla de contenido</h2>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#s1">Creación del proyecto</a></li>
+            <li><a href="#s2">Primer commit</a></li>
+            <li><a href="#s3">Usuario 1 hooks</a></li>
+            <li><a href="#s4">Git Flow</a></li>
+            <li><a href="#s5">Features usuario 2</a></li>
+            <li><a href="#s6">Features usuario 3</a></li>
+            <li><a href="#s7">Release V1.0</a></li>
+            <li><a href="#s8">Hotfix</a></li>
+        </ul>
+    </nav>
 
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <main>
+        <section id="introduccion">
+            <h1>Introducción</h1>
+            <p><strong>¿Que es git?</strong></p>
+            <p>Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la
+                confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un
+                gran número de archivos de código fuente. Su propósito es llevar registro de los cambios en archivos de
+                computadora incluyendo coordinar el trabajo que varias personas realizan sobre archivos compartidos en
+                un repositorio de código.</p>
+            <p><strong>¿Que es git flow?</strong></p>
+            <p>Git Flow es una estrategia creada para mejorar la organización de Branchs (ramificaciones) dentro del
+                repositorio y, de esta forma, dar más fluidez al proceso de nuevos Features y Releases.</p>
+            <img src="./pic/gitFlow.svg" class="svg">
+        </section>
 
-    <script>
-        console.log('eslint test');
-    </script>
+        <section id="s1">
+            <h1>Creación del proyecto</h1>
+            <p>He creado el proyecto usando html5-boilerplate siguiendo los pasos marcados en su <a
+                    href="https://github.com/h5bp/html5-boilerplate">github</a>.</p>
+            <img src="./pic/Screenshot_20221014_174529.png">
+            <p>He arrancado el proyecto para verificar que todo funcionara correctamente, además de que de antemano he
+                realizado un npm install.</p>
+            <img src="./pic/Screenshot_20221014_174547.png">
+        </section>
+        <section id="s2">
+            <h1>Primer commit</h1>
+            <p>Después de que el usuario 1 añadiera su parte en el proyecto procedemos a realizar un primer comit por lo
+                que realizamos un git init para inicializar el repositorio y el usuario 1 realiza el commit.</p>
+            <img src="./pic/Screenshot_20221014_182646.png">
+            <p>Añadimos un nuevo repositorio remoto al proyecto utilizando el comando git remote add. Para
+                posteriormente realizar un push a este repositorio remoto que se encuentra alojado en github, realizamos
+                este push sobre la rama master.</p>
+            <img src="./pic/Screenshot_20221014_182734.png">
+        </section>
+        <section id="s3">
+            <h1>Usuario 1 hooks</h1>
+            <p>He instalado husky en el proyecto y posteriormente he creado los hooks <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/blob/master/.husky/prepare-commit-msg">prepare-commit-msg</a>
+                y
+                <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/blob/master/.husky/post-checkout">post-checkout</a>.
+                He tenido problemas con el hook del msg haciéndolo con bash por lo que al final he
+                decidido reutilizar el que tenía hecho en pyton de una de las actividades anteriores.
+            </p>
+            <img src="./pic/Screenshot_20221014_184007.png">
+            <img src="./pic/Screenshot_20221014_190751.png ">
+            <p>He realizado un commit con los hooks para posteriormente realizar un push.</p>
+            <img src="./pic/Screenshot_20221016_122505.png">
+        </section>
+        <section id="s4">
+            <h1>Git Flow</h1>
+            <p>He creado la rama develop y la he subido al repositorio remoto.</p>
+            <img src="pic/Screenshot_20221016_122646.png">
+        </section>
+        <section id="s5">
+            <h1>Features usuario 2</h1>
+            <p>He creado la rama feature/contenidoHTML desde la rama develop y me he posicionado sobre ella.</p>
+            <img src="./pic/Screenshot_20221017_194354.png">
+            <p>Una vez me he situado sobre la rama y de haber añadido la feature he realizado un commit sobre su rama
+                para más tarde subirla a github con un push.</p>
+            <img src="./pic/Screenshot_20221017_194810.png">
+            <p>Después de realizar el push, he creado una pull request en github en la cual realizo un merge de la rama
+                feature/contenidoHTML con la rama develop. La pull request menciona la issue <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/issues/1">#1</a> que he creado con
+                anterioridad.</p>
+            <img src="./pic/Screenshot_20221018_205122.png">
+            <img src="./pic/Screenshot_20221018_205217.png">
+            <p>Después de realizar el merge, github me daba la posibilidad de eliminar la rama. Cosa que he hecho.</p>
+            <img src="./pic/Screenshot_20221018_205244.png">
+            <p>He creado la rama feature/atributosHTML desde la rama develop y me he posicionado sobre ella.</p>
+            <img src="./pic/Screenshot_20221018_205747.png">
+            <p>He realizado el commit con los respectivos cambios en la rama y además he realizado un push para subir
+                los cambios a github.</p>
+            <img src="./pic/Screenshot_20221018_210015.png">
+            <p>He instalado eslint y eslint-plugin-html como dependencias de desarrollo.</p>
+            <img src="./pic/Screenshot_20221018_210621.png">
+            <p>He configurado eslint (fichero <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/blob/master/.eslintrc.json">.eslintrc.json</a>)
+                y comprobado que funcionara correctamente. La
+                configuración comprueba que el indentado se realice con 4 espacios.</p>
+            <img src="./pic/Screenshot_20221019_131905.png">
+            <img src="./pic/Screenshot_20221019_131924.png">
+            <p>He creado el hook <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/blob/master/.husky/pre-commit">pre-commit</a>
+                además de añadir un script al <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/blob/master/package.json">package.json</a>
+                que ejecita eslint.</p>
+            <img src="./pic/Screenshot_20221019_132206.png">
+            <p>He realizado un commit con el eslint además de subir dicho commit a la rama feature/atributosHTML.</p>
+            <img src="./pic/Screenshot_20221019_151452.png">
+            <p>De igual forma que con la anterior feature he realizado una pull request para esta.</p>
+            <img src="./pic/Screenshot_20221019_151932.png">
+            <img src="./pic/Screenshot_20221019_152048.png">
+            <p>Después de realizar la pull request he cerrado la issue relacionada con la feature en este caso la <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/issues/2">#2</a>.</p>
+            <img src="./pic/Screenshot_20221019_152109.png">
+        </section>
+        <section id="s6">
+            <h1>Features usuario 3</h1>
+            <p>Me he situado en la rama develop y he realizado un pull para obtener los cambios de los anteriores
+                merges.</p>
+            <img src="./pic/Screenshot_20221020_161518.png">
+            <p>He creado la rama de la feature para los estilos css desde la rama develop, y luego de realizar los
+                respectivos cambios he realizado un commit y un push.</p>
+            <img src="./pic/Screenshot_20221020_161722.png">
+            <p>He realizado el merge de la feature en la rama develop. El merge es el que resuelve la issue: <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/issues/5">#5</a>.</p>
+            <img src="./pic/Screenshot_20221020_161747.png">
+            <img src="./pic/Screenshot_20221020_161852.png">
+        </section>
+        <section id="s7">
+            <h1>Release V1.0</h1>
+            <p>Me he posicionado sobre la rama develop y la he actualizado para seguidamente crear la rama release/1.0
+            </p>
+            <img src="./pic/Screenshot_20221020_162131.png">
+            <p>He colocado una tag al último commit en el cual se sitúa la rama de release además de que he subido esta
+                rama junto a la tag a github.</p>
+            <img src="./pic/Screenshot_20221020_162155.png">
+            <img src="./pic/Screenshot_20221020_162252.png">
+            <p>He realizado la pull request para juntar la rama release con la rama master. Al no haber cambiado nada
+                dentro de la propia rama release no ha sido necesario realizar un merge también con la rama develop.</p>
+            <img src="./pic/Screenshot_20221020_162334.png">
+            <img src="./pic/Screenshot_20221020_162424.png">
+        </section>
+        <section id="s8">
+            <h1>Hotfix</h1>
+            <p>Después de actualizar la rama master y situarme sobre ella, he creado la rama para el hotfix. Después de
+                realizar el hotfix he realizado un commit y he subido la rama a github. El hotfix tiene una issue
+                asignada la cual es la issue <a
+                    href="https://github.com/sergimicoortiz/ProyectoFinalGit/issues/8">#8</a>.</p>
+            <img src="./pic/Screenshot_20221020_163051.png">
+            <p>Después de subir el hotfix a github, he realizado dos pull request una para incluir el hotfix en la rama
+                master y otra para incluirlo en la rama develop.</p>
+            <img src="./pic/Screenshot_20221020_163322.png">
+            <img src="./pic/Screenshot_20221020_163342.png">
+            <p>Este es el estado final del <a href="https://github.com/users/sergimicoortiz/projects/1">proyecto en
+                    github</a> en el cual están asociadas todas las issues del repositorio.</p>
+            <img src="./pic/Screenshot_20221020_163425.png">
+        </section>
+    </main>
+
 </body>
 
 </html>
